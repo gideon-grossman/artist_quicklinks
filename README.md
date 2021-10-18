@@ -1,6 +1,6 @@
 # Artist Quicklinks Page
 
-### I built a landing page similar to LinkTree, to make it easy for my fans to find my music and buy merch.
+### I built a landing page similar to [LinkTree](Linktree | The Only Link You'll Ever Needhttps://linktr.ee), to make it easy for my fans to hear my music and buy merch.
 
 ![Quicklinks_Screenshot](src/assets/SiteScreenShot.png)
 
