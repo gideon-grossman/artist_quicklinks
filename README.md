@@ -1,4 +1,6 @@
-# linktree
+# Artist Quicklinks Page
+
+### I built a landing page similar to LinkTree, to make it easy for my fans to find my music and buy merch.
 
 ![Quicklinks_Screenshot](src/assets/SiteScreenShot.png)
 
