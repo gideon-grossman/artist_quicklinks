@@ -1,3 +1,16 @@
 module.exports = {
-  lintOnSave: false
+  lintOnSave: false,
+  chainWebpack: config => {
+    config.module.rules.delete("svg");
+  },
+  configureWebpack: {
+    module: {
+      rules: [
+        {
+          test: /\.svg$/, 
+          loader: 'vue-svg-loader', 
+        },
+      ],
+    }      
+  }
 }
