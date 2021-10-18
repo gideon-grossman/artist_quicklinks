@@ -1,6 +1,6 @@
 # linktree
 
-![Quicklinks_Screenshot](./src/assets/SiteScreenShot.png)
+![Quicklinks_Screenshot](src/assets/SiteScreenShot.png)
 
 ## Project setup
 ```
