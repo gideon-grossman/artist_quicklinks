@@ -11,7 +11,7 @@
         <button class="my-button" @click.prevent = "getSong('Brightness_Spotify')">Brightness</button>
       </div>
       <div class="row">
-        <button class="my-button" @click.prevent = "getSong('DoWhateverMakesYouHappy_Spotify')">Do Whatever Makes You Happy</button>
+        <button class="my-button" @click.prevent = "getSong('Do_Whatever_Makes_You_Happy_Spotify')">Do Whatever Makes You Happy</button>
       </div>
 
       <div class="row mt-5 mb-3 justify-content-center">
