@@ -1,5 +1,7 @@
 # linktree
 
+![Quicklinks_Screenshot](src/assets/SiteScreenShot.png)
+
 ## Project setup
 ```
 yarn install
