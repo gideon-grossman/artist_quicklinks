@@ -27,8 +27,8 @@ export default {
     },
     data() {
         return {
-            name: "Gideon Grossman",
-            tagline: "Live free. Be kind."
+            name: "Gidony",
+            tagline: "Live Free. Be Kind."
         }
     }
 }
