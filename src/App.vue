@@ -2,36 +2,27 @@
   <div id="app">
     <div class="content">
       <Header/>
-      <SocialLinks class="mt-4"/>
+        <SocialLinks class="mt-4"/>
 
       <div class="row mt-5 mb-3 justify-content-center">
         My Music
       </div>
-      <div class="row my-row">
-        <button class="my-button" @click.prevent = "getSong('Brightness_Spotify')">Brightness</button>
-      </div>
-      <div class="row">
-        <button class="my-button" @click.prevent = "getSong('Do_Whatever_Makes_You_Happy_Spotify')">Do Whatever Makes You Happy</button>
+      <div class="row" v-for="song in songs" :key="song.key">
+        <button class="my-button" @click.prevent="getSong(song.key)">{{song.label}}</button>
       </div>
 
       <div class="row mt-5 mb-3 justify-content-center">
         Support
       </div>
-      <div class="row">
-        <button class="my-button" @click.prevent = "getSupportLink('Patreon')">Patreon</button>
-      </div>
-      <div class="row">
-        <button class="my-button" @click.prevent = "getSupportLink('Venmo')">Venmo</button>
+      <div class="row" v-for="channel in supportChannels" :key="channel.key">
+        <button class="my-button" @click.prevent="getSupportLink(channel.key)">{{channel.label}}</button>
       </div>
 
       <div class="row mt-5 mb-3 justify-content-center">
         Merch
       </div>
-      <div class="row">
-        <button class="my-button" @click.prevent = "getMerch('TShirt')">TShirt</button>
-      </div>
-      <div class="row">
-        <button class="my-button" @click.prevent = "getMerch('Stickers')">Stickers</button>
+      <div class="row" v-for="item in merchItems" :key="item.key">
+        <button class="my-button" @click.prevent="getMerch(item.key)">{{item.label}}</button>
       </div>
 
 
@@ -50,6 +41,40 @@ export default {
     Header,
     SocialLinks
   },
+  data() {
+    return {
+      songs: [
+        {
+          label: "Brightness",
+          key: "Brightness_Spotify"
+        },
+        {
+          label: "Do Whatever Makes You Happy",
+          key: "Do_Whatever_Makes_You_Happy_Spotify"
+        },
+      ],
+      supportChannels: [
+        {
+          label: "Patreon",
+          key: "Patreon"
+        },
+        {
+          label: "Venmo",
+          key: "Venmo"
+        }
+      ],
+      merchItems: [
+        {
+          label: "T Shirt",
+          key: "TShirt"
+        },
+        {
+          label: "Stickers",
+          key: "Stickers"
+        }
+      ]
+    }
+  },
   methods: {
     getSong(label) {
       return this.getLinkFromServer('MusicLinks', label);
@@ -61,11 +86,7 @@ export default {
       return this.getLinkFromServer('Support', label);
     },
     async getLinkFromServer(category, label) {
-      //hardcode test
-      console.log('in get Link ' );
       var linkUrl = await getLink(category, label);
-      console.log('linkUrl: ' + linkUrl);
-      // open new page at URL
       window.open(linkUrl);
       return linkUrl;
     }
@@ -80,7 +101,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  /* margin-top: 60px; */
   /* background: linear-gradient(0deg, rgb(200, 100, 100), rgb(58, 78, 255)); */
   background-image: url('./assets/DarkerPalmTreesBackground.jpeg');
   background-repeat: repeat;
@@ -92,7 +112,7 @@ export default {
 }
 
 .content {
-  padding: 2em 23em;
+  padding: 2% 23%;
 }
 
 .my-button {
@@ -101,7 +121,7 @@ export default {
   margin-bottom: 16px;
   transition: box-shadow 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, border-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, transform 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s, background-color 0.25s cubic-bezier(0.08, 0.59, 0.29, 0.99) 0s;
   border: 2px solid rgb(255, 255, 255);
-  background-color: transparent;
+  background-color: black;
   color: rgb(255, 255, 255);
   border-radius: 0px;
   font-weight: bold;

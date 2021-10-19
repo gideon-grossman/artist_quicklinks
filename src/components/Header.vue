@@ -11,7 +11,7 @@
             </div>
         <div class="row subtext">
             <div class="col">
-                &#128513 {{ tagline }} &#127925
+                &#128513 {{ tagline }} 	&#9996
             </div>
         </div>
     </div>

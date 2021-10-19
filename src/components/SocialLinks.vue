@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="row justify-content-center social-links">
-            <div class="col-1" v-for="socialLink in socialLinks" :key="socialLink.name">
+        <div class="row justify-content-center">
+            <div class="col-2 col-md-1 p2" v-for="socialLink in socialLinks" :key="socialLink.name">
                 <a :href="socialLink.url" class="logo">
                     <SVGGenerator :siteName="socialLink.name"/>
                 </a>
@@ -61,8 +61,5 @@ export default {
     /* height: 32px;
     width: 32px; */
     transform: scale(1.5);
-}
-.social-links {
-    height: 1em;
 }
 </style>
