@@ -115,6 +115,16 @@ export default {
   padding: 2% 23%;
 }
 
+@media (max-width: 500px) {
+  .content {
+    padding: 1% 15%;
+  }
+}
+@media (max-width: 300px) {
+  .content {
+    padding:0px;
+  }
+}
 .my-button {
   z-index: 0;
   overflow: hidden;
@@ -126,7 +136,6 @@ export default {
   border-radius: 0px;
   font-weight: bold;
   padding: 1em;
-
 }
 .my-button:hover {
   box-shadow:
