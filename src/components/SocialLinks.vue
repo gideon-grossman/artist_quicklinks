@@ -29,7 +29,7 @@ export default {
                 },
                 {
                     name: "Spotify",
-                    url: "https://www.spotify.com/gidony",
+                    url: "https://open.spotify.com/artist/1s74HokA1YSJlweb1Wf30J",
                 },
                 {
                     name: "Youtube",
