@@ -1,7 +1,7 @@
 # Artist Quicklinks Page
 
 ### I built a landing page similar to [LinkTree](https://linktr.ee), to make it easy for my fans to hear my music and buy merch.
-
+## Check if out [here](https://gideongrossmanhome.github.io/artist_quicklinks/)
 ![Quicklinks_Screenshot](src/assets/SiteScreenShot.png)
 
 ## Project setup
